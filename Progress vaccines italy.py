@@ -3,10 +3,10 @@ import json
 
 
 def download_from_url():
-	sito = "https://raw.githubusercontent.com/italia/covid19-opendata-vaccini/master/dati"
+	url = "https://raw.githubusercontent.com/italia/covid19-opendata-vaccini/master/dati"
 	italy_list = []
 	try:
-		with urllib.request.urlopen(sito + '/vaccini-summary-latest.json') as response:
+		with urllib.request.urlopen(url + '/vaccini-summary-latest.json') as response:
 			region_list = json.loads(response.read())
 			for region in region_list['data']:
 				italy_list.append(region)
