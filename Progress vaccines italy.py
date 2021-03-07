@@ -12,8 +12,7 @@ def download_from_url():
 				italy_list.append(region)
 		return italy_list
 	except ValueError:
-		# in case the URL is not valid print the following strings
-		print("La forma del URL non e' valida")
+		print("URL form is invalid")
 		print("Ex: http://www.google.com")
 		return -1
 
